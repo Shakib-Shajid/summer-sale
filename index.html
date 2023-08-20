@@ -51,7 +51,8 @@
                         <h3 class="text-4xl font-semibold mb-8 mt-40">Sportswear</h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                             <!-- 1st card -->
-                            <div class="card lg:w-72 bg-base-100 shadow-xl" onclick="buyField()">
+                            <div class="card lg:w-72 bg-base-100 shadow-xl" id="abcdef"
+                                onclick="buyField('cap-price', 'total-price'), addElement('cap-title') ">
                                 <figure class="px-16 py-9 m-5 bg-[#aaaaaa80] rounded-xl ">
                                     <img src="images/prod4.png" alt="Shoes" />
                                 </figure>
@@ -65,14 +66,15 @@
                                         <input type="radio" name="rating-1" class="mask mask-star-2 bg-amber-300" />
                                     </div>
                                     <div>
-                                        <p class="text-2xl font-semibold my-2">Sports Back Cap</p>
+                                        <p class="text-2xl font-semibold my-2" id="cap-title">Sports Back Cap</p>
                                         <p class="text-xl text-[#11111180]"><span id="cap-price">49.00</span> TK</p>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- 2nd card -->
-                            <div class="card lg:w-72 bg-base-100 shadow-xl " onclick="b()">
+                            <div class="card lg:w-72 bg-base-100 shadow-xl "
+                                onclick="buyField('jersey-price', 'total-price' ), addElement('jersey-title')">
                                 <figure class="px-16 py-2 m-5 bg-[#aaaaaa80] rounded-xl">
                                     <img src="images/prod5.png" alt="Shoes" />
                                 </figure>
@@ -86,7 +88,7 @@
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-amber-300" />
                                     </div>
                                     <div>
-                                        <p class="text-2xl font-semibold my-2">Full Jersey Set</p>
+                                        <p class="text-2xl font-semibold my-2" id="jersey-title">Full Jersey Set</p>
                                         <p class="text-xl text-[#11111180]"><span id="jersey-price">69.00</span> TK</p>
                                     </div>
                                 </div>
@@ -182,6 +184,7 @@
                         </div>
                     </section>
                 </div>
+
                 <div class="md:max-w-xs lg:mt-[232px]">
                     <div class="p-6 bg-white rounded-lg ">
                         <p class="text-2xl font-medium">Have coupon?</p>
@@ -193,16 +196,18 @@
                         </div>
                     </div>
                     <div class="mt-6 p-6 bg-white  rounded-lg text-2xl font-medium leading-10">
-                        <ol>
-                            <li>Home Cooker</li>
-                            <li>Sports cates</li>
-                            <li>Home Cooker</li>
-                        </ol>
+                        <div>
+                            <ol id="set-products">
+
+                            </ol>
+
+                        </div>
+
                         <hr class=" my-3 border-[#11111126]">
                         <div class="relative">
                             <p>Total price: <span class="text-[#11111180]" id="total-price"> 00.00</span><span
                                     class="text-[#11111180]">TK</span></p>
-                            <p>Discount : <span class="text-[#11111180]" id="discount">0.00</span><span
+                            <p>Discount : <span class="text-[#11111180]" id="total-discount">0.00</span><span
                                     class="text-[#11111180]">TK</span></p>
                             <p>Total: <span class="text-[#11111180]" id="total">00.00 </span><span
                                     class="text-[#11111180]">TK</span></p>
