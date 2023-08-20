@@ -51,7 +51,7 @@
                         <h3 class="text-4xl font-semibold mb-8 mt-40">Sportswear</h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                             <!-- 1st card -->
-                            <div class="card lg:w-72 bg-base-100 shadow-xl">
+                            <div class="card lg:w-72 bg-base-100 shadow-xl" onclick="buyField()">
                                 <figure class="px-16 py-9 m-5 bg-[#aaaaaa80] rounded-xl ">
                                     <img src="images/prod4.png" alt="Shoes" />
                                 </figure>
@@ -66,13 +66,13 @@
                                     </div>
                                     <div>
                                         <p class="text-2xl font-semibold my-2">Sports Back Cap</p>
-                                        <p class="text-xl text-[#11111180]">49.00 TK</p>
+                                        <p class="text-xl text-[#11111180]"><span id="cap-price">49.00</span> TK</p>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- 2nd card -->
-                            <div class="card lg:w-72 bg-base-100 shadow-xl">
+                            <div class="card lg:w-72 bg-base-100 shadow-xl " onclick="b()">
                                 <figure class="px-16 py-2 m-5 bg-[#aaaaaa80] rounded-xl">
                                     <img src="images/prod5.png" alt="Shoes" />
                                 </figure>
@@ -87,7 +87,7 @@
                                     </div>
                                     <div>
                                         <p class="text-2xl font-semibold my-2">Full Jersey Set</p>
-                                        <p class="text-xl text-[#11111180]">69.00 TK</p>
+                                        <p class="text-xl text-[#11111180]"><span id="jersey-price">69.00</span> TK</p>
                                     </div>
                                 </div>
                             </div>
@@ -119,7 +119,7 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-10">
                             <!-- 1st card -->
                             <div class="card lg:w-72 bg-base-100 shadow-xl">
-                                <figure class="px-8 py-4 m-5 bg-[#aaaaaa80] rounded-xl ">
+                                <figure class="px-8 py-4 m-5 bg-[#aaaaaa80] rounded-xl">
                                     <img src="images/prod7.png" alt="Shoes" />
                                 </figure>
                                 <div class="card-body items-center text-center">
@@ -183,12 +183,13 @@
                     </section>
                 </div>
                 <div class="md:max-w-xs lg:mt-[232px]">
-                    <div class="p-6 bg-white rounded-lg">
+                    <div class="p-6 bg-white rounded-lg ">
                         <p class="text-2xl font-medium">Have coupon?</p>
                         <div class="flex items-baseline">
-                            <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
-                            <button
-                                class="px-5 py-3 bg-[#E527B2] text-white hover:bg-gray-200 rounded-r-lg -ml-2">Apply</button>
+                            <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs"
+                                id="coupon-input" />
+                            <button class="btn  bg-[#E527B2] text-white rounded-r-lg" id="coupon-button"
+                                style="border-radius: 0px 50px 50px 0px" disabled>Apply</button>
                         </div>
                     </div>
                     <div class="mt-6 p-6 bg-white  rounded-lg text-2xl font-medium leading-10">
@@ -199,11 +200,11 @@
                         </ol>
                         <hr class=" my-3 border-[#11111126]">
                         <div class="relative">
-                            <p>Total price: <span class="text-[#11111180]"> 00.00</span><span
+                            <p>Total price: <span class="text-[#11111180]" id="total-price"> 00.00</span><span
                                     class="text-[#11111180]">TK</span></p>
-                            <p>Discount : <span class="text-[#11111180]">0.00</span><span
+                            <p>Discount : <span class="text-[#11111180]" id="discount">0.00</span><span
                                     class="text-[#11111180]">TK</span></p>
-                            <p>Total: <span class="text-[#11111180]">00.00 </span><span
+                            <p>Total: <span class="text-[#11111180]" id="total">00.00 </span><span
                                     class="text-[#11111180]">TK</span></p>
                             <hr class=" my-6 border-[#11111126]">
                             <!-- <button class="btn bg-[#E527B2] text-white w-full font-semibold absolute"> -->
@@ -211,7 +212,7 @@
 
                             <!-- Open the modal using ID.showModal() method -->
                             <button class="btn bg-[#E527B2] text-white w-full font-semibold absolute"
-                                onclick="my_modal_5.showModal()">Make Purchase</button>
+                                id="purchase-button" onclick="my_modal_5.showModal()" disabled>Make Purchase</button>
                             <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
                                 <form method="dialog" class="modal-box text-center">
                                     <div class="flex justify-center px-36 py-10">
@@ -248,6 +249,7 @@
     <footer>
 
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
