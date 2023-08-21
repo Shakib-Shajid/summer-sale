@@ -96,7 +96,7 @@ function buyField(priceId, totalId) {
   const totalPrice = document.getElementById(totalId);
   const totalPriceValue = parseFloat(totalPrice.innerText);
 
-  const add = sportswearCapValue + totalPriceValue;
+  const add = (sportswearCapValue + totalPriceValue).toFixed(2);
   totalPrice.innerText = add;
   const total = document.getElementById("total");
   total.innerText = add;
@@ -124,7 +124,7 @@ function buyField(priceId, totalId) {
           document.getElementById("total-discount").innerText
         );
         const totalValueString = parseFloat(total.innerText);
-        const totalValue = add - totalDiscount;
+        const totalValue = (add - totalDiscount).toFixed(2);
         total.innerText = totalValue;
         console.log(typeof add, typeof totalDiscount);
       });
@@ -138,6 +138,6 @@ function addElement(name) {
   const count = setProducts.childElementCount;
   li.classList.add("text-2xl", "font-medium", "leading-10");
 
-  li.innerText = `${count + 1} ${nameTitle}`;
+  li.innerText = `${count + 1}${"."} ${nameTitle}`;
   setProducts.appendChild(li);
 }

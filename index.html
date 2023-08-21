@@ -95,8 +95,9 @@
                             </div>
 
                             <!-- 3rd card -->
-                            <div class="card lg:w-72 bg-base-100 shadow-xl">
-                                <figure class="px-6 py-2 m-5 bg-[#aaaaaa80] rounded-xl">
+                            <div class="card lg:w-72 bg-base-100 shadow-xl "
+                                onclick="buyField('cates-price', 'total-price' ), addElement('cates-title')">
+                                <figure class=" px-6 py-2 m-5 bg-[#aaaaaa80] rounded-xl">
                                     <img src="images/prod6.png" alt="Shoes" />
                                 </figure>
                                 <div class="card-body items-center text-center">
@@ -109,8 +110,8 @@
                                         <input type="radio" name="rating-3" class="mask mask-star-2 bg-amber-300" />
                                     </div>
                                     <div>
-                                        <p class="text-2xl font-semibold my-2">Sports cates</p>
-                                        <p class="text-xl text-[#11111180]">159.00 TK</p>
+                                        <p class="text-2xl font-semibold my-2" id="cates-title">Sports cates</p>
+                                        <p class="text-xl text-[#11111180]"><span id="cates-price">159.00</span> TK</p>
                                     </div>
                                 </div>
                             </div>
@@ -120,7 +121,8 @@
                         <h3 class="text-4xl font-semibold mb-8 mt-14">Furniture</h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-10">
                             <!-- 1st card -->
-                            <div class="card lg:w-72 bg-base-100 shadow-xl">
+                            <div class="card lg:w-72 bg-base-100 shadow-xl"
+                                onclick="buyField('chair-price', 'total-price'), addElement('chair-title') ">
                                 <figure class="px-8 py-4 m-5 bg-[#aaaaaa80] rounded-xl">
                                     <img src="images/prod7.png" alt="Shoes" />
                                 </figure>
@@ -134,14 +136,15 @@
                                         <input type="radio" name="rating-4" class="mask mask-star-2 bg-amber-300" />
                                     </div>
                                     <div>
-                                        <p class="text-2xl font-semibold my-2">Single Relax Chair</p>
-                                        <p class="text-xl text-[#11111180]">185.00 TK</p>
+                                        <p class="text-2xl font-semibold my-2" id="chair-title">Single Relax Chair</p>
+                                        <p class="text-xl text-[#11111180]"><span id="chair-price">185.30</span> TK</p>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- 2nd card -->
-                            <div class="card lg:w-72 bg-base-100 shadow-xl">
+                            <div class="card lg:w-72 bg-base-100 shadow-xl"
+                                onclick="buyField('children-price', 'total-price'), addElement('children-title') ">
                                 <figure class="px-8 py-4 m-5 bg-[#aaaaaa80] rounded-xl">
                                     <img src="images/prod8.png" alt="Shoes" />
                                 </figure>
@@ -155,14 +158,16 @@
                                             checked />
                                     </div>
                                     <div>
-                                        <p class="text-2xl font-semibold my-2">Children play</p>
-                                        <p class="text-xl text-[#11111180]">299.00 TK</p>
+                                        <p class="text-2xl font-semibold my-2" id="children-title">Children play</p>
+                                        <p class="text-xl text-[#11111180]"><span id="children-price">299.00</span> TK
+                                        </p>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- 3rd card -->
-                            <div class="card lg:w-72 bg-base-100 shadow-xl">
+                            <div class="card lg:w-72 bg-base-100 shadow-xl"
+                                onclick="buyField('sofa-price', 'total-price'), addElement('Sofa-title') ">
                                 <figure class="px-8 py-4 m-5 bg-[#aaaaaa80] rounded-xl">
                                     <img src="images/prod9.png" alt="Shoes" />
                                 </figure>
@@ -176,8 +181,8 @@
                                             checked />
                                     </div>
                                     <div>
-                                        <p class="text-2xl font-semibold my-2">Flexible Sofat</p>
-                                        <p class="text-xl text-[#11111180]">339.00 TK</p>
+                                        <p class="text-2xl font-semibold my-2" id="Sofa-title">Flexible Sofa</p>
+                                        <p class="text-xl text-[#11111180]"><span id="sofa-price">339.00</span> TK</p>
                                     </div>
                                 </div>
                             </div>
@@ -228,7 +233,11 @@
                                     </p>
                                     <div class="modal-action flex justify-center">
                                         <!-- if there is a button in form, it will close the modal -->
-                                        <button class="btn font-semibold bg-[#E527B2] text-white px-11">Go Home</button>
+                                        <button class="btn font-semibold bg-[#E527B2] text-white px-11"><a
+                                                href="./index.html">Go Home</a></button>
+
+                                        <!-- <button class="btn  bg-[#E527B2] text-lg font-semibold border-0 text-white">
+                                            <a href="./index.html">Go Home</a></button> -->
                                     </div>
                                 </form>
                             </dialog>
